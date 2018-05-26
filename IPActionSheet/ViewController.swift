@@ -20,13 +20,13 @@ extension UINavigationController: IPActionSheetPresentable {
             return CGSize(width: 400, height: 300)
         case (.compact, .regular):
             // iPhone portrait
-            return CGSize(width: view.frame.width, height: view.frame.width / 3)
+            return CGSize(width: 300, height: 300)
         case (.regular, .compact):
             // iPhone Plus landscape
-            return CGSize(width: 400, height: 300)
+            return CGSize(width: 300, height: 300)
         case (.compact, .compact):
             // iPhone landscape
-            return CGSize(width: 400, height: 200)
+            return CGSize(width: 300, height: 300)
         default:
             return view.frame.size
         }

@@ -82,7 +82,10 @@ private extension IPActionSheetViewConfigurator {
         containerView.backgroundColor = UIColor.white
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.clipsToBounds = true
-        containerView.layer.cornerRadius = 5
+        containerView.layer.cornerRadius = 10
+        containerView.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        containerView.layer.borderWidth = 0.5
+        
         view.addSubview(containerView)
         
         containerView.pinToSuperviewEdges(with: UIEdgeInsets(top: 8, left: 8, bottom: -8, right: -8),

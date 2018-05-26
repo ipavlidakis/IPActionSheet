@@ -37,7 +37,7 @@ final class IPActionSheetPresenter {
         configurator.configure(view: view,
                                tapGestureRecognizer: tapGestureRecognizer,
                                embeddedViewController: presentationEvent.embeddedViewController,
-                               viewModel: IPActionSheetControllerViewModel(effect: nil))
+                               viewModel: IPActionSheetControllerViewModel(effect: UIVibrancyEffect(blurEffect: UIBlurEffect(style: .prominent))))
     }
 
     func willTransition(to newCollection: UITraitCollection,

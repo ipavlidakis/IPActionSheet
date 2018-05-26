@@ -31,17 +31,19 @@ final class IPActionSheetControllerDismissalransition: NSObject, UIViewControlle
         
         let duration = transitionDuration(using: transitionContext)
         
-        UIView.animate(withDuration: duration,
-                       delay: 0,
-                       usingSpringWithDamping: 1,
-                       initialSpringVelocity: 0,
-                       options: .curveLinear,
-                       animations:{ fromVC.containerView.frame = finalFrame },
-                       completion: nil)
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: .calculationModeCubic, animations: {
             
-            UIView.addKeyframe(withRelativeStartTime: 1/2, relativeDuration: 1, animations: { fromVC.visualEffectView.effect = nil })
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: { fromVC.containerView.alpha = 0 })
+            UIView.animate(withDuration: duration,
+                           delay: 0,
+                           usingSpringWithDamping: 1,
+                           initialSpringVelocity: 0,
+                           options: .curveLinear,
+                           animations:{ fromVC.containerView.frame = finalFrame },
+                           completion: nil)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/3, animations: {
+                fromVC.visualEffectView.effect = nil
+            })
+            UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1, animations: { fromVC.containerView.alpha = 0 })
         }, completion: { _ in
             
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

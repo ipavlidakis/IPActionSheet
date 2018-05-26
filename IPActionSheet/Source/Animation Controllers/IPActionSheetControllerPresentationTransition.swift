@@ -52,7 +52,7 @@ final class IPActionSheetControllerPresentationTransition: NSObject, UIViewContr
         
         UIView.animateKeyframes(withDuration: duration, delay: 0, options: .calculationModeCubic, animations: {
             
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/2, animations: { toVC.visualEffectView.effect = effect })
+            UIView.addKeyframe(withRelativeStartTime: 1/2, relativeDuration: 1, animations: { toVC.visualEffectView.effect = effect })
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: { toVC.containerView.alpha = 1 })
         }, completion: { _ in
             
