@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,6 +77,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcR-2k-nbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-486" y="91"/>
+        </scene>
+        <!--ViewController 1-->
+        <scene sceneID="PsW-2V-9JP">
+            <objects>
+                <viewController storyboardIdentifier="vc1" id="WRF-bb-dBn" customClass="vc1" customModule="IPActionSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JgP-Cy-NrH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEY-CR-OiL">
+                                <rect key="frame" x="135" y="328.5" width="104" height="30"/>
+                                <state key="normal" title="Next Controller"/>
+                                <connections>
+                                    <segue destination="epC-6a-baN" kind="show" id="yQz-iq-A5l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94216513311974381" green="1" blue="0.19304023966518535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eEY-CR-OiL" firstAttribute="centerX" secondItem="JgP-Cy-NrH" secondAttribute="centerXWithinMargins" id="5gh-RQ-cUB"/>
+                            <constraint firstItem="eEY-CR-OiL" firstAttribute="centerY" secondItem="5np-cP-qLo" secondAttribute="centerY" id="lEv-vk-xwV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5np-cP-qLo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ViewController 1" id="AmT-bZ-MlR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkK-uu-Ulf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487" y="868"/>
+        </scene>
+        <!--ViewController 2-->
+        <scene sceneID="ygn-xj-cpG">
+            <objects>
+                <viewController storyboardIdentifier="vc2" id="epC-6a-baN" customClass="vc2" customModule="IPActionSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DFV-kb-zb4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.34751672070946737" blue="0.91661197233540881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="pZr-Jl-Bmd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ViewController 2" id="uEf-6R-IZ6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hli-uL-0rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="868"/>
         </scene>
     </scenes>
 </document>

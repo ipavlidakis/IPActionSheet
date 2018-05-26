@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4087476420BA06AA0013C750 /* IPActionSheetControllerPresentationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087476320BA06AA0013C750 /* IPActionSheetControllerPresentationTransition.swift */; };
+		4087476620BA0E4C0013C750 /* IPActionSheetControllerDismissalransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087476520BA0E4C0013C750 /* IPActionSheetControllerDismissalransition.swift */; };
 		40E341B020B98A8C00A3139E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E341AF20B98A8C00A3139E /* AppDelegate.swift */; };
 		40E341B220B98A8C00A3139E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E341B120B98A8C00A3139E /* ViewController.swift */; };
 		40E341B520B98A8C00A3139E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E341B320B98A8C00A3139E /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4087476320BA06AA0013C750 /* IPActionSheetControllerPresentationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPActionSheetControllerPresentationTransition.swift; sourceTree = "<group>"; };
+		4087476520BA0E4C0013C750 /* IPActionSheetControllerDismissalransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPActionSheetControllerDismissalransition.swift; sourceTree = "<group>"; };
 		40E341AC20B98A8C00A3139E /* IPActionSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPActionSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E341AF20B98A8C00A3139E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E341B120B98A8C00A3139E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4087476220BA069B0013C750 /* Animation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4087476320BA06AA0013C750 /* IPActionSheetControllerPresentationTransition.swift */,
+				4087476520BA0E4C0013C750 /* IPActionSheetControllerDismissalransition.swift */,
+			);
+			path = "Animation Controllers";
+			sourceTree = "<group>";
+		};
 		40E341A320B98A8C00A3139E = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		40E341CF20B98C8700A3139E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4087476220BA069B0013C750 /* Animation Controllers */,
 				40E341DD20B9A37C00A3139E /* IPActionSheet.swift */,
 				40E341D020B98C9A00A3139E /* IPActionSheetController.swift */,
 				40E341D920B99DA200A3139E /* IPActionSheetNamespace.swift */,
@@ -253,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4087476620BA0E4C0013C750 /* IPActionSheetControllerDismissalransition.swift in Sources */,
 				40E341DE20B9A37C00A3139E /* IPActionSheet.swift in Sources */,
 				40E341DA20B99DA200A3139E /* IPActionSheetNamespace.swift in Sources */,
+				4087476420BA06AA0013C750 /* IPActionSheetControllerPresentationTransition.swift in Sources */,
 				40E341D420B98D9300A3139E /* UIView+Pinning.swift in Sources */,
 				40E341DC20B9A10900A3139E /* IPActionSheetNavigator.swift in Sources */,
 				40E341E520B9A68C00A3139E /* IPActionSheetViewConfigurator.swift in Sources */,

@@ -10,6 +10,11 @@ import UIKit
 
 protocol IPActionSheetEvent { }
 
+protocol IPActionSheetPresentable where Self: UIViewController {
+    
+    func preferredSize(for traitCollection: UITraitCollection) -> CGSize
+}
+
 extension IPActionSheet {
     
     enum Position {
@@ -42,6 +47,8 @@ extension IPActionSheet {
 
 extension IPActionSheet {
     
+    typealias IPActionSheetPresentableViewController = UIViewController & IPActionSheetPresentable
+    
     struct NavigationEvent: IPActionSheetEvent {
         
         let position: Position
@@ -49,6 +56,7 @@ extension IPActionSheet {
         let animated: Bool
         let contextMode: UIModalPresentationStyle
         let window: UIWindow?
+        let embeddedViewController: IPActionSheetPresentableViewController
         let completionBlock: PresentationCompletionBlock?
         
         func reverse() -> NavigationEvent {
@@ -58,6 +66,7 @@ extension IPActionSheet {
                                    animated: animated,
                                    contextMode: contextMode,
                                    window: window,
+                                   embeddedViewController: embeddedViewController,
                                    completionBlock: nil)
         }
     }

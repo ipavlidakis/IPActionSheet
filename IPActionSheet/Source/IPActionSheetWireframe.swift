@@ -29,7 +29,7 @@ private extension IPActionSheetWireframe {
     func makeActionSheetViewController(event: IPActionSheet.NavigationEvent) -> IPActionSheetController {
         
         let viewController = IPActionSheetController()
-        let viewControllerConfigurator = IPActionSheetViewConfigurator()
+        let viewControllerConfigurator = IPActionSheetViewConfigurator(containerView: viewController.containerView, visualEffectView: viewController.visualEffectView)
         let navigator = IPActionSheetNavigator(sourceViewController: viewController)
         let router = IPActionSheetRouter(navigator: navigator, wireframe: self)
         let viewControllerPresenter = IPActionSheetPresenter(viewController: viewController,
@@ -38,6 +38,7 @@ private extension IPActionSheetWireframe {
                                                              router: router)
         
         viewController.presenter = viewControllerPresenter
+        viewController.transitioningDelegate = viewController
         
         return viewController
     }

@@ -32,7 +32,8 @@ final class IPActionSheet {
 
 extension IPActionSheet {
     
-    func perform(for position: Position) {
+    func perform(for position: Position,
+                 embeddedViewController: IPActionSheetPresentableViewController) {
         
         switch position {
         case .actionSheet:
@@ -42,10 +43,11 @@ extension IPActionSheet {
             window.backgroundColor = .clear
             
             let navigationEvent = NavigationEvent(position: position,
-                                                  presentationMode: .inNewWindow,
+                                                  presentationMode: .modal,
                                                   animated: true,
                                                   contextMode: .overCurrentContext,
                                                   window: window,
+                                                  embeddedViewController: embeddedViewController,
                                                   completionBlock: nil)
             
             router.performEvent(event: navigationEvent)

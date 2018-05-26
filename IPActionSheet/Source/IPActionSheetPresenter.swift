@@ -30,9 +30,21 @@ final class IPActionSheetPresenter {
         
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emptySpaceTapped(_:)))
         
+        presentationEvent.embeddedViewController.willMove(toParentViewController: viewController)
+        viewController.addChildViewController(presentationEvent.embeddedViewController)
+        presentationEvent.embeddedViewController.didMove(toParentViewController: viewController)
+        
         configurator.configure(view: view,
                                tapGestureRecognizer: tapGestureRecognizer,
-                               viewModel: IPActionSheetControllerViewModel(effect: UIBlurEffect(style: .regular)))
+                               embeddedViewController: presentationEvent.embeddedViewController,
+                               viewModel: IPActionSheetControllerViewModel(effect: nil))
+    }
+
+    func willTransition(to newCollection: UITraitCollection,
+                        with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        configurator.configure(to: presentationEvent.embeddedViewController.preferredSize(for: newCollection),
+                               with: coordinator)
     }
 }
 
